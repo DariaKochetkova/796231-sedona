@@ -59,9 +59,11 @@
           </fieldset>
           <fieldset>
           <legend>Стоимость в сутки (р):</legend>
-          <label class="visually-hidden">Цена
-          <output name="priceoutput-min"></output>
-          <output name="priceoutput-max"></output>
+          <label class="visually-hidden" for="filter-price-min">От</label>
+          <input class="filter-input" type="text" name="price-min" id="filter-price-min" placeholder="От 0">
+          <input class="filter-input" type="text" name="price-max" id="filter-price-max" placeholder="До 3000">
+          <label class="visually-hidden" for="filter-price-max">До</label>
+          <label class="visually-hidden" for="pricecount">Цена</label>
           <input class="filter-input filter-input-range" type="range" id="pricecount" name="pricecount" min="0" max="3000" step="1">
           </label>
           </fieldset>
