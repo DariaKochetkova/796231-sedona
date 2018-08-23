@@ -81,9 +81,27 @@
           <p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <img src="img/map.jpg" width="1200" height="594" alt="США, штат Аризона, город Седона">
         </section>
-        <section class="searching-form">
+        <section class="">
           <h2>Поиск гостиницы в Седоне</h2>
-          <!-- Здесь будет форма -->
+          <form class="searching-form" action="https://echo.htmlacademy.ru" method="post">
+            <p class="searching-item">
+              <label for="check-in-date">Дата заезда</label>
+              <input id="check-in-date" type="date" name="date" placeholder="24 апреля 2017">
+            </p>
+            <p class="searching-item">
+              <label for="check-out-date">Время</label>
+              <input id="check-out-date" type="date" name="date" placeholder="4 июля 2017">
+            </p>
+            <p class="searching-item">
+              <label for="adults">Взрослые</label>
+              <input id="adults" type="number" name="adults" min="0" max="100" step="1" placeholder="2">
+            </p>
+            <p class="searching-item">
+              <label for="kids">Дети</label>
+              <input id="kids" type="number" name="kids" min="0" max="100" step="1" placeholder="0">
+            </p>
+            <button class="button" type="submit">Найти</button>
+          </form>
         </section>
         <footer class="main-footer">
           <b class="hashtag">#visitsedona</b>
