@@ -35,7 +35,7 @@
                 <label for="filter-parking-lot">Парковка</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wi-fi" id="wi-fi">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wi-fi" id="filter-wi-fi">
                 <label for="filter-wi-fi">Wi-fi</label>
               </li>
             </ul>
@@ -58,14 +58,13 @@
             </ul>
           </fieldset>
           <fieldset>
-          <legend>Стоимость в сутки (р):</legend>
-          <label class="visually-hidden" for="filter-price-min">От</label>
-          <input class="filter-input" type="text" name="price-min" id="filter-price-min" placeholder="От 0">
-          <input class="filter-input" type="text" name="price-max" id="filter-price-max" placeholder="До 3000">
-          <label class="visually-hidden" for="filter-price-max">До</label>
-          <label class="visually-hidden" for="pricecount">Цена</label>
-          <input class="filter-input filter-input-range" type="range" id="pricecount" name="pricecount" min="0" max="3000" step="1">
-          </label>
+            <legend>Стоимость в сутки (р):</legend>
+            <label class="visually-hidden" for="filter-price-min">От</label>
+            <input class="filter-input" type="text" name="price-min" id="filter-price-min" placeholder="От 0">
+            <input class="filter-input" type="text" name="price-max" id="filter-price-max" placeholder="До 3000">
+            <label class="visually-hidden" for="filter-price-max">До</label>
+            <label class="visually-hidden" for="pricecount">Цена</label>
+            <input class="filter-input filter-input-range" type="range" id="pricecount" name="pricecount" min="0" max="3000" step="1">
           </fieldset>
           <button type="submit" class="filter-button button">Показать</button>
         </form>

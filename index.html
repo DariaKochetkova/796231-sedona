@@ -29,38 +29,44 @@
         </div>
         <section class="advantages">
           <div class="announce">
-            <b>Седона - небольшой городок в Аризоне, заслуживающий большего</b>
+            <b>Седона - небольшой городок в Аризоне, заслуживающий большего!</b>
             <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-            <h2 class="visually-hidden">Преимущества</h2>
           </div>
+          <h2 class="visually-hidden">Преимущества</h2>
           <ul class="advantages-list">
             <li class="advantages-item-pic">
-              <h3>Настоящий городок</h3>
-              <p class="advantages-item-number">- №1 -</p>
-              <p class="advanteges-item-description">Седона - не аттракцион для туристов, там течет своя жизнь</p>
+              <div class="index-line-pic">
+                <h3>Настоящий городок</h3>
+                <p class="advantages-item-number">- №1 -</p>
+                <p class="advanteges-item-description">Седона - не аттракцион для туристов, там течет своя жизнь</p>
+              </div>
               <img src="img/advantages-town.jpg" width="800" height="401" alt="Город">
             </li>
             <li class="advantages-item-pic">
-              <h3>Там есть мост дьявола</h3>
-              <p class="advantages-item-number">- №2 -</p>
-              <p class="advanteges-item-description"> Да, понему можно пройти! Если конечно вы осмелитесь</p>
+              <div class="index-line-pic">
+                <h3>Там есть мост дьявола</h3>
+                <p class="advantages-item-number">- №2 -</p>
+                <p class="advanteges-item-description"> Да, понему можно пройти! Если конечно вы осмелитесь</p>
+              </div>
               <img src="img/advantages-bridge.jpg" width="800" height="400" alt="Мост">
             </li>
-            <li class="advantages-item">
-              <h3>Небольшая площадь</h3>
-              <p class="advantages-item-number">- №3 -</p>
-              <p class="advanteges-item-description">Все достопримечательности находятся очень близко</p>
-            </li>
-            <li class="advantages-item">
-              <h3>Красивая дорога</h3>
-              <p class="advantages-item-number">- №4 -</p>
-              <p class="advanteges-item-description">Ехать в седону из лас-вегаса совсем не скучно!</p>
-            </li>
-            <li class="advantages-item">
-              <h3>Мало туристов</h3>
-              <p class="advantages-item-number">- №5 -</p>
-              <p class="advanteges-item-description">Больштнство едет в гранд каньон и толпится там</p>
-            </li>
+            <div class="index-line">
+              <li class="advantages-item">
+                <h3>Небольшая площадь</h3>
+                <p class="advantages-item-number">- №3 -</p>
+                <p class="advanteges-item-description">Все достопримечательности находятся очень близко</p>
+              </li>
+              <li class="advantages-item">
+                <h3>Красивая дорога</h3>
+                <p class="advantages-item-number">- №4 -</p>
+                <p class="advanteges-item-description">Ехать в седону из лас-вегаса совсем не скучно!</p>
+              </li>
+              <li class="advantages-item">
+                <h3>Мало туристов</h3>
+                <p class="advantages-item-number">- №5 -</p>
+                <p class="advanteges-item-description">Больштнство едет в гранд каньон и толпится там</p>
+              </li>
+            </div>
             <li class="advantages-item-details">
               <ul class="details-list">
                 <li class="details-list-item">
@@ -82,35 +88,40 @@
         <section class="visit-sedona">
           <b class="interested">Заинтересовались?</b>
           <p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
-          <img src="img/map.jpg" width="1200" height="594" alt="США, штат Аризона, город Седона">
-        </section>
-        <section class="">
-          <h2>Поиск гостиницы в Седоне</h2>
           <form class="searching-form" action="https://echo.htmlacademy.ru" method="post">
+            <button class="button button-find-hotel" type="submit">Поиск гостиницы в Седоне</button>
             <p class="searching-item">
               <label for="check-in-date">Дата заезда</label>
               <input id="check-in-date" type="text" name="date" value="24 апреля 2017">
-              <button class="calendar-button" type="button"></button>
+              <button class="calendar-button" type="button">
+                <p class="visually-hidden">выбор даты</p>
+              </button>
             </p>
             <p class="searching-item">
               <label for="check-out-date">Дата выезда</label>
               <input id="check-out-date" type="text" name="date" value="4 июля 2017">
-              <button class="calendar-button" type="button"></button>
+              <button class="calendar-button" type="button">
+                <p class="visually-hidden">выбор даты</p>
+              </button>
             </p>
             <p class="searching-item">
               <label for="adults">Взрослые</label>
               <button class="increase-button" type="button">+</button>
-              <input id="adults" type="text" name="adults" placeholder="2">
+              <input id="adults" type="text" name="adults" value="2">
               <button class="decrease-button" type="button">-</button>
             </p>
             <p class="searching-item">
               <label for="kids">Дети</label>
               <button class="increase-button" type="button">+</button>
-              <input id="kids" type="text" name="kids" placeholder="0">
+              <input id="kids" type="text" name="kids" value="0">
               <button class="decrease-button" type="button">-</button>
             </p>
-            <button class="button" type="submit">Найти</button>
+            <button class="button button-search" type="submit">Найти</button>
           </form>
+        </section>
+        <section class="index-map">
+          <h2 class="visually-hidden">Карта</h2>
+          <img src="img/map.jpg" width="1200" height="594" alt="США, штат Аризона, город Седона">
         </section>
         <footer class="main-footer">
           <b class="hashtag">#visitsedona</b>

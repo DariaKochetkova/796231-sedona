@@ -9,5 +9,189 @@ body {
   color: #333333;
   text-transform: uppercase;
 
-  background: white;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-navigation {
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  color: #000000;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: #81b3d2;
+}
+
+.intro {
+  background-image: url("../img/intro-background.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.announce {
+  line-height: 26px;
+  text-align: center;
+}
+
+.announce b {
+  font-size: 21px;
+  font-weight: 700;
+  color: #000000;
+
+}
+
+.advantages-list,
+.details-list {
+  list-style: none;
+  text-align: center;
+}
+
+.advantages-list h3,
+.advantages-list h4 {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.advantages-item h3,
+.advantages-item-details h4 {
+  color: #000000;
+}
+
+.advantages-item-pic {
+  color: #ffffff;
+}
+
+.index-line-pic {
+  background-color: #81b3d2;
+}
+
+.index-line {
+  background-color: #eeeeee;
+}
+
+.visit-sedona {
+  text-align: center;
+}
+
+.interested {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.visit-sedona p {
+  line-height: 24px;
+}
+
+.button {
+  font: inherit;
+
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  border: none;
+}
+
+.button-find-hotel {
+  background-color: #766357;
+}
+
+.button-find-hotel:hover,
+.button-find-hotel:focus {
+  background-color: #604e43;
+}
+
+.button-find-hotel:active {
+  background-color: #503e33;
+}
+
+.searching-item,
+.searching-item input {
+  font: inherit;
+
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.searching-item input {
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.searching-item input:hover {
+  background-color: #ebebeb;
+  border: none;
+}
+
+.searching-item input:focus {
+  outline: none;
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+}
+
+
+
+.button-search {
+  background-color: #81b3d2;
+}
+
+.button-search:hover,
+.button-search:focus {
+  background-color: #669ec0;
+}
+
+.button-search:active {
+  background-color: #5496bd;
+}
+
+.hashtag {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+}
+
+.main-footer {
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.social-button {
+  color: #ffffff;
+}
+
+.footer-copyright {
+  line-height: 26px;
+  color: #000000;
 }
