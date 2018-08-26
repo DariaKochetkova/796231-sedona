@@ -37,6 +37,16 @@ a {
   color: #81b3d2;
 }
 
+.site-navigation a:active {
+  color: #000000;
+  opacity: 0.3;
+}
+
+.site-navigation-current a {
+  line-height: 26px;
+  color: #766357;
+}
+
 .intro {
   background-image: url("../img/intro-background.jpg");
   background-position: top center;
@@ -84,19 +94,17 @@ a {
   background-color: #eeeeee;
 }
 
-.visit-sedona {
-  text-align: center;
-}
-
 .interested {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   color: #000000;
+  text-align: center;
 }
 
 .visit-sedona p {
   line-height: 24px;
+  text-align: center;
 }
 
 .button {
@@ -123,6 +131,7 @@ a {
 
 .button-find-hotel:active {
   background-color: #503e33;
+  opacity: 0.3;
 }
 
 .searching-item,
@@ -162,6 +171,156 @@ a {
 
 .button-search:active {
   background-color: #5496bd;
+  opacity: 0.3;
+}
+
+.filters {
+  background-image: url("../img/filter-background.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.filter {
+  color: #ffffff;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.filter ul {
+  list-style: none;
+}
+
+.filter-input {
+  font: inherit;
+
+  color: #ffffff;
+  background: transparent;
+  text-align: center;
+  border: 2px solid white;
+}
+
+.button-show  {
+  font: inherit;
+
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid white;
+}
+
+.button-show:hover  {
+  font: inherit;
+
+  color: #000000;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background: #ffffff;
+  border: none;
+}
+
+.searching-result {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.sorting {
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.sorting-list {
+  font-size: 12px;
+  line-height: 18px;
+  list-style: none;
+}
+
+.sorting-list a {
+  color: #000000;
+  opacity: 0.3;
+}
+
+.sorting-list a:hover,
+.sorting-list a:focus {
+  color: #81b3d2;
+}
+
+.sorting-list a:active {
+  color: #000000;
+}
+
+.sorting-list-current a {
+  color: #81b3d2;
+}
+
+.hotels-list {
+  list-style: none;
+}
+
+.hotel-name a {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.hotel-name a:hover,
+.hotel-name a:focus {
+  color: #81b3d2;
+}
+
+.hotel-name a:active {
+  color: #000000;
+  opacity: 0.3;
+}
+
+.button-info {
+  font-size: 14px;
+  line-height: 21px;
+  background-color: #81b3d2;
+}
+
+.button-info:hover,
+.button-info:focus {
+  color: #669ec0;
+}
+
+.button-info:active {
+  background-color: #5496bd;
+  opacity: 0.3;
+}
+
+.button-book {
+  font-size: 14px;
+  line-height: 21px;
+  background-color: #766357;
+}
+
+.button-book:hover,
+.button-book:focus {
+  background-color: #604e43;
+}
+
+.button-book:active {
+  background-color: #503e33;
+  opacity: 0.3;
+}
+
+.rate {
+  color: #666666;
+  background-color: #f2f2f2;
 }
 
 .hashtag {
@@ -193,28 +352,3 @@ a {
   line-height: 26px;
   color: #000000;
 }
-
-.filters {
-  background-image: url("../img/filter-background.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-}
-
-.filter {
-  color: #ffffff;
-}
-
-.filter fieldset {
-  border: none;
-}
-
-.filter legend {
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.filter ul {
-  list-style: none;
-}
-
-.filter-input:hover + label,
