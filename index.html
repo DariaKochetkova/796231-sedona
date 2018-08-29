@@ -15,7 +15,7 @@
             <img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип Седона">
           </a>
           <ul class="site-navigation">
-            <li><a href="info.html">Информация</a></li>
+            <li class="site-navigation-current"><a>Информация</a></li>
             <li><a href="media.html">Фото и видео</a></li>
             <li><a href="map.html">Карта штата</a></li>
             <li><a href="hotels.html">Гостиницы</a></li>
@@ -69,18 +69,20 @@
             </div>
             <li class="advantages-item-details">
               <ul class="details-list">
-                <li class="details-list-item">
-                  <h4>Жилье</h4>
-                  <p>Рекомендуем пожить в настоящем отеле, все как в кино!</p>
-                </li>
-                <li class="details-list-item">
-                  <h4>Еда</h4>
-                  <p>Всегда заказывайте фирменнй бургер, вы не разочаруетесь</p>
-                </li>
-                <li class="details-list-item">
-                  <h4>Сувениры</h4>
-                  <p>Не только китайского, но и местного производства</p>
-                </li>
+                <div class="details-line">
+                  <li class="details-list-item">
+                    <h4>Жилье</h4>
+                    <p>Рекомендуем пожить в настоящем отеле, все как в кино!</p>
+                  </li>
+                  <li class="details-list-item">
+                    <h4>Еда</h4>
+                    <p>Всегда заказывайте фирменнй бургер, вы не разочаруетесь</p>
+                  </li>
+                  <li class="details-list-item">
+                    <h4>Сувениры</h4>
+                    <p>Не только китайского, но и местного производства</p>
+                  </li>
+                </div>
               </ul>
             </li>
           </ul>
@@ -88,8 +90,8 @@
         <section class="visit-sedona">
           <b class="interested">Заинтересовались?</b>
           <p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <button class="button button-find-hotel" type="submit">Поиск гостиницы в Седоне</button>
           <form class="searching-form" action="https://echo.htmlacademy.ru" method="post">
-            <button class="button button-find-hotel" type="submit">Поиск гостиницы в Седоне</button>
             <p class="searching-item">
               <label for="check-in-date">Дата заезда</label>
               <input id="check-in-date" type="text" name="date" value="24 апреля 2017">
@@ -133,7 +135,7 @@
             </ul>
             <p class="footer-copyright">
               Website by
-              <a class="academy-logo" href="https://htmlacademy.ru">
+              <a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss">
                 <img src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy">
               </a>
             </p>
