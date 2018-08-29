@@ -283,7 +283,7 @@ input[type="radio"].visually-hidden {
 
 .button-find-hotel:active {
   background-color: #503e33;
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .visit-sedona {
@@ -339,7 +339,7 @@ input[type="radio"].visually-hidden {
 
 .button-search:active {
   background-color: #5496bd;
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .index-map {
@@ -357,11 +357,15 @@ input[type="radio"].visually-hidden {
 
 .filters {
   background-image: url("../img/filter-background.jpg");
-  background-position: top center;
+  background-size: 1200px 800px;
+  background-position: center -294px;
   background-repeat: no-repeat;
+  height: 217px;
 }
 
 .filter {
+  display: flex;
+
   color: #ffffff;
 }
 
@@ -409,6 +413,13 @@ input[type="radio"].visually-hidden {
   border: none;
 }
 
+.sorting-navigation {
+  display: flex;
+
+  height: 86px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
 .searching-result {
   font-size: 21px;
   line-height: 26px;
@@ -447,7 +458,17 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels-list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+.hotels-item {
+  display: flex;
+
+  height: 150px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .hotel-name a {
@@ -480,7 +501,7 @@ input[type="radio"].visually-hidden {
 
 .button-info:active {
   background-color: #5496bd;
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-book {
@@ -496,7 +517,7 @@ input[type="radio"].visually-hidden {
 
 .button-book:active {
   background-color: #503e33;
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .rate {
