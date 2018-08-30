@@ -48,6 +48,7 @@ input[type="radio"].visually-hidden {
 
 .main-header-logo {
   position: absolute;
+  right: 0; left: 0; margin: auto;
   width: 140px;
   height: 72px;
   z-index: 1;
@@ -60,9 +61,7 @@ input[type="radio"].visually-hidden {
 
   background-color: #ffffff;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
 }
 
 .site-navigation {
@@ -72,17 +71,31 @@ input[type="radio"].visually-hidden {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  padding: 15px 73px;
+}
+
+.site-navigation li {
+  width: 240px;
+}
+
+.site-navigation li:first-child,
+.site-navigation li:nth-child(2) {
+  text-align: left;
+}
+
+.site-navigation li:nth-child(2) {
+  margin-right: 94px;
+}
+
+.site-navigation li:last-child,
+.site-navigation li:nth-child(3) {
+  text-align: right;
 }
 
 .site-navigation a {
   display: block;
   color: #000000;
   vertical-align: middle;
-  padding: 15px 73px;
-}
-
-.site-navigation li:nth-child(2) {
-  margin-right: 244px;
 }
 
 .site-navigation a:hover,
@@ -132,12 +145,7 @@ input[type="radio"].visually-hidden {
 
   background-color: #ffffff;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  height: 216px;
+  padding: 61px 350px;
 }
 
 .announce b {
@@ -159,6 +167,7 @@ input[type="radio"].visually-hidden {
 .advantages-list {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .advantages-list li:first-child {
@@ -193,23 +202,18 @@ input[type="radio"].visually-hidden {
   background-color: #81b3d2;
   width: 400px;
   height: 196px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
+
   padding: 30px 50px;
 }
 
-.index-line {
+.line {
   background-color: #eee;
-  display: flex;
 }
 
 .advantages-item {
   width: 400px;
   height: 196px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
+
   padding: 30px 75px;
 }
 
@@ -225,9 +229,7 @@ input[type="radio"].visually-hidden {
 .details-list-item {
     width: 400px;
     height: 271px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+
     padding: 30px 70px;
 }
 
@@ -528,16 +530,17 @@ input[type="radio"].visually-hidden {
 .main-footer {
   background-color: #ffffff;
   opacity: 0.9;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 
   min-height: 120px;
-  display: flex;
-  align-items: center;
 }
 
 .hashtag {
-  display: flex;
-  width: 400px;
+  display:flex;
   justify-content: center;
+  width: 400px;
 
   font-size: 21px;
   line-height: 26px;
@@ -546,14 +549,13 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-social {
-  display: flex;
   width: 400px;
-
-  justify-content: center;
 }
 
 .footer-social ul {
+  display: flex;
   list-style: none;
+  justify-content: center;
 }
 
 .social-button {
@@ -562,10 +564,9 @@ input[type="radio"].visually-hidden {
 
 .footer-copyright {
   margin: 0;
-
-  display: flex;
-  width: 400px;
+  display:flex;
   justify-content: center;
+  width: 400px;
 
   line-height: 26px;
   color: #000000;
