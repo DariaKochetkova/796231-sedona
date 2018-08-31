@@ -93,7 +93,6 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation a {
-  display: block;
   color: #000000;
   vertical-align: middle;
 }
@@ -114,22 +113,28 @@ input[type="radio"].visually-hidden {
 }
 
 .intro {
-  display: flex;
-  justify-content: center;
   position: relative;
   height: 508px;
 
   background-image: url("../img/intro-background.jpg");
   background-size: 1200px 800px;
-  background-position: center -83px;
+  background-position: center -82px;
   background-repeat: no-repeat;
+}
+
+.intro img {
+  display:block;
+
+  position: absolute;
+  top: 76px;
+  right: 371px;
 }
 
 .intro::after {
   content: "";
 
   position: absolute;
-  top: 451px;
+  bottom: -3px;
 
   width: 1200px;
   height: 60px;
@@ -145,7 +150,7 @@ input[type="radio"].visually-hidden {
 
   background-color: #ffffff;
 
-  padding: 61px 350px;
+  padding: 53px 350px;
 }
 
 .announce b {
@@ -166,7 +171,7 @@ input[type="radio"].visually-hidden {
 
 .advantages-list {
   display: flex;
-  flex-direction: column;
+
   flex-wrap: wrap;
 }
 
@@ -211,10 +216,19 @@ input[type="radio"].visually-hidden {
 }
 
 .advantages-item {
+  box-sizing: border-box;
   width: 400px;
-  height: 196px;
+  height: 256px;
 
-  padding: 30px 75px;
+  padding: 30px 72px;
+}
+
+.advantages-item:nth-child(4) {
+  box-sizing: border-box;
+  width: 400px;
+  height: 256px;
+
+  padding: 30px 68px;
 }
 
 .index-line-pic h3,
@@ -222,26 +236,16 @@ input[type="radio"].visually-hidden {
   padding: 0 60px;
 }
 
-.details-line {
+.details-list {
   display: flex;
 }
 
 .details-list-item {
-    width: 400px;
-    height: 271px;
+  box-sizing: border-box;
+  width: 400px;
+  height: 330px;
 
-    padding: 30px 70px;
-}
-
-.box-interested {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-
-  background-color: #fff;
-
-  height: 292px;
+  padding: 30px 70px;
 }
 
 .interested {
@@ -289,12 +293,20 @@ input[type="radio"].visually-hidden {
 }
 
 .visit-sedona {
+  background-color: #fff;
+  height: 291px;
+}
+
+.form-container {
   position: relative;
+  width: 570px;
+  height: 378px;
+  margin: 0 auto;
+  top: 117px;
 }
 
 .searching-form {
   position: absolute;
-  right: 315px;
 
   width: 570px;
   min-height: 395px;
@@ -538,8 +550,7 @@ input[type="radio"].visually-hidden {
 }
 
 .hashtag {
-  display:flex;
-  justify-content: center;
+  text-align: center;
   width: 400px;
 
   font-size: 21px;
