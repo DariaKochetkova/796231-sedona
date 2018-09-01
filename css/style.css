@@ -379,12 +379,22 @@ input[type="radio"].visually-hidden {
 
 .filter {
   display: flex;
+  justify-content: space-between;
 
   color: #ffffff;
+
+  padding: 30px 73px;
 }
 
 .filter fieldset {
   border: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.filter fieldset:nth-child(2) {
+  margin-right: 230px;
 }
 
 .filter legend {
@@ -394,7 +404,54 @@ input[type="radio"].visually-hidden {
 
 .filter ul {
   list-style: none;
+
+  padding: 0;
+  margin: 0;
 }
+
+.filter-option {
+  margin-top: 27px;
+  margin-bottom: 2px;
+  padding-left: 40px;
+}
+
+.filter-option label {
+  position: relative;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: -3px;
+
+
+  width: 27px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+/*.filter-input-checkbox + label:nth-child(2)::before,
+.filter-input-checkbox + label:last-child::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: -3px;
+
+
+  width: 23px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}*/
 
 .filter-input {
   font: inherit;
@@ -527,28 +584,50 @@ input[type="radio"].visually-hidden {
 
 .sorting-navigation {
   display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
 
-  height: 86px;
   border-bottom: 1px solid #e5e5e5;
+  padding: 30px 73px
 }
 
 .searching-result {
+  padding: 0;
+  margin: 0;
+
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
+
+  margin-right: 49px;
 }
 
 .sorting {
+  margin: 0;
+  padding: 0;
+
   font-size: 12px;
   line-height: 18px;
   color: #000000;
+
+  margin-right: 40px;
 }
 
 .sorting-list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
   font-size: 12px;
   line-height: 18px;
   list-style: none;
+}
+
+.sorting-list li {
+  margin-right: 33px;
 }
 
 .sorting-list a {
