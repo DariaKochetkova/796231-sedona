@@ -424,7 +424,25 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
 
-  border: none
+  border: none;
+  background-color: transparent;
+}
+
+.calendar-button svg {
+  color: #cccccc;
+}
+
+.calendar-button svg:hover,
+.calendar-button svg:focus {
+  color: #000000;
+}
+
+.calendar-button svg:active {
+  color: #81b3d2;
+}
+
+.calendar-button:active {
+  outline: none;
 }
 
 .adults input,
@@ -450,9 +468,22 @@ input[type="radio"].visually-hidden {
 .increase-button,
 .decrease-button {
   position: absolute;
+  top: 0;
 
+  width: 38px;
+  height: 38px;
+
+  background-color: /*#f2f2f2;*/ red;
+  border: none;
+
+  color: #a9a9a9;
+  font-size: 52px;
   /*border: none;
   background-color: transparent;*/
+}
+
+.adults .increase-button {
+  right: -30px;
 }
 
 .searching-item input:hover {
@@ -464,6 +495,13 @@ input[type="radio"].visually-hidden {
   outline: none;
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
+  padding: 4px 0 4px 10px;
+}
+
+.adults input:focus,
+.kids input:focus {
+  text-align: center;
+  padding: 4px 0 4px;
 }
 
 .button-search {
