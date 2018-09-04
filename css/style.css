@@ -441,7 +441,8 @@ input[type="radio"].visually-hidden {
   color: #81b3d2;
 }
 
-.calendar-button:active {
+.calendar-button:active,
+.calendar-button:focus {
   outline: none;
 }
 
@@ -866,7 +867,7 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
 
   border-bottom: 1px solid #e5e5e5;
-  padding: 28px 73px 31px;
+  padding: 28px 73px 29px;
 }
 
 .description {
@@ -890,7 +891,7 @@ input[type="radio"].visually-hidden {
 .hotels-item-price {
   margin: 0;
   font-size: 14px;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 }
 
 .hotels-item-price {
@@ -926,7 +927,7 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 21px;
   background-color: #81b3d2;
-  padding: 3px 17px 6px;
+  padding: 4px 17px 5px;
   margin-right: 6px;
 }
 
@@ -944,7 +945,7 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 21px;
   background-color: #766357;
-  padding: 3px 17px 6px;
+  padding: 4px 17px 5px;
 }
 
 .button-book:hover,
@@ -978,7 +979,7 @@ input[type="radio"].visually-hidden {
 
   color: #666666;
   background-color: #f2f2f2;
-  padding: 2px 13px 3px 15px;
+  padding: 3px 13px 2px 15px;
 }
 
 .main-footer {
@@ -1028,6 +1029,17 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 
+.social-button:hover,
+.social-button:focus {
+  background-color: #669ec0;
+}
+
+.social-button svg:active {
+  fill: #ffffff;
+  opacity: 0.3;
+}
+
+
 .footer-copyright {
   margin: 0;
   display:flex;
@@ -1042,4 +1054,18 @@ input[type="radio"].visually-hidden {
 
 .footer-copyright p {
   margin-right: 8px;
+}
+
+.footer-copyright svg {
+  margin-top: 10px;
+  color: #000000;
+}
+
+.footer-copyright svg:hover,
+.footer-copyright svg:focus {
+  color: #81b3d2;
+}
+
+.footer-copyright svg:active {
+  color: #bdbbbc;
 }
