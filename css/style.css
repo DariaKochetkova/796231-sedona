@@ -593,26 +593,25 @@ input[type="radio"].visually-hidden {
   top: -3px;
 
 
-  width: 27px;
+  width: 23px;
   height: 23px;
 
-  background-image: url("../img/checkbox-on.svg");
+  background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
-.filter-input-checkbox + label:nth-child(2)::before,
-.filter-input-checkbox + label:last-child::before {
+.filter-input-checkbox:checked + label::before {
   content: "";
   position: absolute;
   left: -40px;
   top: -3px;
 
 
-  width: 23px;
+  width: 27px;
   height: 23px;
 
-  background-image: url("../img/checkbox-off.svg");
+  background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -791,6 +790,7 @@ input[type="radio"].visually-hidden {
 }
 
 .sorting-list li {
+  position: relative;
   margin-right: 33px;
 }
 
@@ -812,9 +812,43 @@ input[type="radio"].visually-hidden {
   color: #81b3d2;
 }
 
+.sorting-list-type:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-bottom: 2px dashed #81b3d2;
+}
+
 .arrow {
-  margin: 0 11px;
+  margin-left: 11px;
   font-size: 0;
+}
+
+.arrow::before {
+    content: "";
+    display: inline-block;
+    border: 10px solid #cacaca;
+    border-right-width: 5px;
+    border-left-width: 5px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+}
+
+.arrow-up::before {
+    border-top-width: 0;
+}
+
+.arrow-down::before {
+    border-bottom-width: 0;
+}
+
+.arrow::before:hover,
+.arrow::before:focus {
+  border: 10px solid #000000;
+}
+
+.arrow::before:active {
+  border: 10px solid #81b3d2;
 }
 
 .special-sorting {
@@ -826,10 +860,10 @@ input[type="radio"].visually-hidden {
   display:flex;
   position: relative;
 
-  margin-left: 459px;
+  margin-left: 461px;
 }
 
-.arrow-up::before {
+/*.arrow-up::before {
   content: "";
   position: absolute;
 
@@ -853,7 +887,7 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/icon-down-dir.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-}
+}*/
 
 .hotels-list {
   margin: 0;
@@ -965,6 +999,10 @@ input[type="radio"].visually-hidden {
   display: flex;
 
   list-style: none;
+}
+
+.stars li {
+  margin-left: 5px;
 }
 
 .rate-wrapper {
