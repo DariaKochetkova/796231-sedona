@@ -250,10 +250,61 @@ input[type="radio"].visually-hidden {
 }
 
 .details-list-item {
+  position: relative;
+
   box-sizing: border-box;
   width: 400px;
 
-  padding: 133px 64px 64px;
+  padding: 133px 60px 68px;
+}
+
+.details-list-item h4 {
+  margin-bottom: 24px;
+}
+
+.homes::before {
+  content: "";
+
+  position: absolute;
+  top: 61px;
+  right: 163px;
+
+  width: 75px;
+  height: 72px;
+
+  background-image: url("../img/details-homes.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.food::before {
+  content: "";
+
+  position: absolute;
+  top: 61px;
+  right: 163px;
+
+  width: 74px;
+  height: 70px;
+
+  background-image: url("../img/details-food.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.souvenirs::before {
+  content: "";
+
+  position: absolute;
+  top: 55px;
+  right: 169px;
+
+  width: 64px;
+  height: 76px;
+
+  background-image: url("../img/details-souvenirs.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .visit-sedona {
@@ -343,20 +394,21 @@ input[type="radio"].visually-hidden {
 .searching-item input {
   background-color: #f2f2f2;
   border: none;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
 }
 
-.width input {
+.check-in input,
+.check-out input {
   width: 346px;
   box-sizing: border-box;
   padding: 6px 0 6px 12px;
 }
 
-.width:first-child label {
+.check-in label {
   margin-right: 22px;
 }
 
-.width:nth-child(2) label {
+.check-out label {
   margin-right: 18px;
 }
 
@@ -375,22 +427,23 @@ input[type="radio"].visually-hidden {
   border: none
 }
 
-.half-width input {
+.adults input,
+.kids input {
   width: 114px;
   box-sizing: border-box;
   text-align: center;
   padding: 6px 0 6px;
 }
 
-.searching-item:nth-of-type(3) label {
+.adults label {
   margin-right: 41px;
 }
 
-.searching-item:nth-of-type(3) input {
+.adults input {
   margin-right: 53px;
 }
 
-.searching-item:last-of-type label {
+.kids label {
   margin-right: 27px;
 }
 
@@ -398,20 +451,8 @@ input[type="radio"].visually-hidden {
 .decrease-button {
   position: absolute;
 
-  border: none;
-  background-color: transparent;
-}
-
-.increase-button {
-  left: 145px;
-  top: 10px;
-  z-index: 1;
-}
-
-.decrease-button {
-  right: 80px;
-  top: 6px;
-  z-index: 1;
+  /*border: none;
+  background-color: transparent;*/
 }
 
 .searching-item input:hover {
