@@ -92,7 +92,7 @@
             <form class="searching-form form-show" action="https://echo.htmlacademy.ru" method="post">
               <p class="searching-item check-in">
                 <label for="check-in-date">Дата заезда:</label>
-                <input id="check-in-date" type="text" name="date" value="24 апреля 2017">
+                <input id="check-in-date" type="text" name="check-in-date" value="24 апреля 2017">
                 <button class="calendar-button" type="button">
                   <span class="visually-hidden">выбор даты</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" fill="currentColor" viewBox="0 0 21 22"><path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/></svg>
@@ -100,7 +100,7 @@
               </p>
               <p class="searching-item check-out">
                 <label for="check-out-date">Дата выезда:</label>
-                <input id="check-out-date" type="text" name="date" value="4 июля 2017">
+                <input id="check-out-date" type="text" name="check-out-date" value="4 июля 2017">
                 <button class="calendar-button" type="button">
                   <span class="visually-hidden">выбор даты</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" fill="currentColor" viewBox="0 0 21 22"><path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/></svg>
@@ -151,14 +151,44 @@
       </main>
     </div>
     <script>
-  var button = document.querySelector(".button-find-hotel");
+      var button = document.querySelector(".button-find-hotel");
 
-  var popup = document.querySelector(".searching-form");
+      var popup = document.querySelector(".searching-form");
 
-  button.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.toggle("form-show");
-  });
-  </script>
+      var form = popup.querySelector("form");
+      var checkin = popup.querySelector("[name=check-in-date]");
+      var checkout = popup.querySelector("[name=check-out-date]");
+
+      var isStorageSupport = true;
+      var storage = "";
+
+      try {
+        storage = localStorage.getItem("check-in-date");
+      } catch (err) {
+        isStorageSupport = false;
+      }
+
+      button.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.toggle("form-show");
+        checkin.focus();
+      });
+      form.addEventListener("submit", function (evt) {
+        if (!checkin.value || !checkout.value) {
+          evt.preventDefault();
+          console.log("Нужно выбрать дату");
+          } else {
+            if (isStorageSupport) {
+              localStorage.setItem("login", login.value);
+          }
+        }
+      });
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+            popup.classList.add("form-show");
+          }
+      });
+    </script>
   </body>
 </html>
