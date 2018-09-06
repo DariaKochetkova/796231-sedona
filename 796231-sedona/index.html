@@ -154,13 +154,12 @@
     <script>
       var button = document.querySelector(".button-find-hotel");
 
-      var popup = document.querySelector(".searching-form");
+      var form = document.querySelector(".searching-form");
 
-      var form = popup.querySelector("form");
-      var checkin = popup.querySelector("[name=check-in-date]");
-      var checkout = popup.querySelector("[name=check-out-date]");
-      var adults = popup.querySelector("[name=adults]");
-      var kids = popup.querySelector("[name=kids]");
+      var checkin = form.querySelector("[name=check-in-date]");
+      var checkout = form.querySelector("[name=check-out-date]");
+      var adults = form.querySelector("[name=adults]");
+      var kids = form.querySelector("[name=kids]");
 
       var isStorageSupport = true;
       var storage = "";
@@ -176,7 +175,7 @@
 
       button.addEventListener("click", function (evt) {
         evt.preventDefault();
-        popup.classList.toggle("form-show");
+        form.classList.toggle("form-show");
         checkin.focus();
       });
       form.addEventListener("submit", function (evt) {
@@ -192,11 +191,6 @@
           }
         }
       });
-
-      $(".button-find-hotel").click(function () {
-        $(".searching-form").slideToggle("slow");
-      });
-
     </script>
   </body>
 </html>

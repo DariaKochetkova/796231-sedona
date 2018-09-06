@@ -369,7 +369,6 @@ input[type="radio"].visually-hidden {
   position: relative;
 
   width: 570px;
-  height: 481px;
 
   margin: 0 auto;
 }
@@ -564,6 +563,8 @@ input[type="radio"].visually-hidden {
 }
 
 .index-map iframe {
+  position: absolute;
+
   border: none;
 }
 
