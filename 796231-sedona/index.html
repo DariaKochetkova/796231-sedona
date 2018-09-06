@@ -159,12 +159,17 @@
       var form = popup.querySelector("form");
       var checkin = popup.querySelector("[name=check-in-date]");
       var checkout = popup.querySelector("[name=check-out-date]");
+      var adults = popup.querySelector("[name=adults]");
+      var kids = popup.querySelector("[name=kids]");
 
       var isStorageSupport = true;
       var storage = "";
 
       try {
         storage = localStorage.getItem("check-in-date");
+        storage = localStorage.getItem("check-out-date");
+        storage = localStorage.getItem("adults");
+        storage = localStorage.getItem("kids");
       } catch (err) {
         isStorageSupport = false;
       }
@@ -175,12 +180,15 @@
         checkin.focus();
       });
       form.addEventListener("submit", function (evt) {
-        if (!checkin.value || !checkout.value) {
+        if (!checkin.value || !checkout.value || !adults.value || !kids.value) {
           evt.preventDefault();
-          console.log("Нужно выбрать дату");
+          console.log("Нужно заполнить все поля");
           } else {
             if (isStorageSupport) {
-              localStorage.setItem("checkin", checkin.value);
+              localStorage.setItem("check-in-date", checkin.value);
+              localStorage.setItem("check-out-date", checkout.value);
+              localStorage.setItem("adults", adults.value);
+              localStorage.setItem("kids", kids.value);
           }
         }
       });
