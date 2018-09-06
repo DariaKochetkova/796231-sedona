@@ -52,9 +52,13 @@ input[type="radio"].visually-hidden {
 
 .main-header-logo {
   position: absolute;
-  right: 0; left: 0; margin: auto;
+
+  right: 0;
+  left: 0;
+  margin: auto;
   width: 140px;
   height: 72px;
+
   z-index: 1;
 }
 
@@ -73,8 +77,10 @@ input[type="radio"].visually-hidden {
   padding: 0;
 
   list-style: none;
+
   display: flex;
   flex-wrap: wrap;
+
   padding: 13px 73px 15px;
 }
 
@@ -160,7 +166,9 @@ input[type="radio"].visually-hidden {
 .announce b {
   font-size: 21px;
   font-weight: 700;
+
   color: #000000;
+
   width: 576px;
 }
 
@@ -179,7 +187,6 @@ input[type="radio"].visually-hidden {
 
 .advantages-list {
   display: flex;
-
   flex-wrap: wrap;
 }
 
@@ -213,6 +220,7 @@ input[type="radio"].visually-hidden {
 
 .index-line-pic {
   background-color: #81b3d2;
+
   width: 400px;
 
   padding: 26px 50px 34px;
@@ -307,7 +315,9 @@ input[type="radio"].visually-hidden {
 
 .visit-sedona {
   background-color: #fff;
+
   text-align: center;
+
   padding-top: 51px;
   height: 240px;
 }
@@ -339,7 +349,6 @@ input[type="radio"].visually-hidden {
 }
 
 .button-find-hotel {
-
   background-color: #766357;
 
   width: 570px;
@@ -358,8 +367,10 @@ input[type="radio"].visually-hidden {
 
 .form-container {
   position: relative;
+
   width: 570px;
   height: 481px;
+
   margin: 0 auto;
 }
 
@@ -371,7 +382,7 @@ input[type="radio"].visually-hidden {
 
   padding: 55px;
 
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 
   z-index: 1;
@@ -412,15 +423,18 @@ input[type="radio"].visually-hidden {
 
 .searching-item input:focus {
   outline: none;
+
   background-color: #ffffff;
+
   border: 2px solid #e5e5e5;
   padding: 4px 0 4px 10px;
 }
 
 .check-in input,
 .check-out input {
-  width: 346px;
   box-sizing: border-box;
+
+  width: 346px;
   padding: 6px 42px 6px 12px;
 }
 
@@ -474,9 +488,11 @@ input[type="radio"].visually-hidden {
 
 .adults input,
 .kids input {
-  width: 39px;
   box-sizing: border-box;
+
   text-align: center;
+
+  width: 39px;
   padding: 6px 0 6px;
 }
 
@@ -523,6 +539,7 @@ input[type="radio"].visually-hidden {
 
 .button-search {
   background-color: #81b3d2;
+
   padding: 16px 196px;
   margin-top: 25px;
 }
@@ -544,6 +561,10 @@ input[type="radio"].visually-hidden {
 
 .index-map {
   height: 473px;
+}
+
+.index-map iframe {
+  border: none;
 }
 
 .index-map img {
@@ -891,7 +912,7 @@ input[type="radio"].visually-hidden {
 }
 
 .arrow.arrow-down::before {
-    border-bottom-width: 0;
+  border-bottom-width: 0;
   border-right-width: 5px;
   border-left-width: 5px;
   border-right-color: transparent;
