@@ -21,6 +21,10 @@ img {
   height: auto;
 }
 
+input::-ms-clear {
+display: none;
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -385,6 +389,7 @@ input[type="radio"].visually-hidden {
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 
   z-index: 1;
+  transform: translateY(-100%);
 }
 
 .searching-item,
@@ -438,11 +443,11 @@ input[type="radio"].visually-hidden {
 }
 
 .check-in label {
-  margin-right: 24px;
+  margin-right: 22px;
 }
 
 .check-out label {
-  margin-right: 21px;
+  margin-right: 19px;
 }
 
 .calendar-button {
@@ -482,7 +487,7 @@ input[type="radio"].visually-hidden {
 .adults {
   width: 226px;
 
-  margin-right: 55px;
+  margin-right: 53px;
 }
 
 .adults input,
@@ -496,7 +501,7 @@ input[type="radio"].visually-hidden {
 }
 
 .adults label {
-  margin-right: 41px;
+  margin-right: 40px;
 }
 
 .kids label {
@@ -554,8 +559,14 @@ input[type="radio"].visually-hidden {
 }
 
 
-.form-show {
-  display: none;
+.slide-down {
+  transition: all .4s ease-in-out;
+  transform: translateY(0);
+}
+
+.slide-up {
+  transition: all .8s ease-in-out;
+  transform: translateY(-120%);
 }
 
 .index-map {
@@ -696,8 +707,8 @@ input[type="radio"].visually-hidden {
   display: inline-block;
 
   font-size: 14px;
-  line-height: 38px;
-  vertical-align: top;
+  line-height: 21px;
+  padding-top: 6px;
 
   cursor: pointer;
 }
@@ -705,7 +716,7 @@ input[type="radio"].visually-hidden {
 .price-controls .min-price,
 .price-controls .max-price {
   width: 90px;
-  padding-left: 65px;
+  padding-left: 55px;
 }
 
 .price-controls input {
@@ -717,6 +728,8 @@ input[type="radio"].visually-hidden {
 
   background: none;
   border: none;
+
+  padding-bottom: 9px;
 }
 
 .range-controls {
@@ -1061,7 +1074,7 @@ input[type="radio"].visually-hidden {
   justify-content: center;
   align-items: center;
 
-  min-height: 119px;
+  height: 119px;
 }
 
 .index-footer {
