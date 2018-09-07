@@ -389,7 +389,9 @@ input[type="radio"].visually-hidden {
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 
   z-index: 1;
-  transform: translateY(-100%);
+
+  transition: all .8s ease-in-out;
+  transform: translateY(0);
 }
 
 .searching-item,
@@ -558,13 +560,7 @@ input[type="radio"].visually-hidden {
   color: rgba(255, 255, 255, 0.3);
 }
 
-
-.slide-down {
-  transition: all .4s ease-in-out;
-  transform: translateY(0);
-}
-
-.slide-up {
+.form-show {
   transition: all .8s ease-in-out;
   transform: translateY(-120%);
 }

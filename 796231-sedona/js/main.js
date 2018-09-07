@@ -37,13 +37,3 @@ form.addEventListener("submit", function (evt) {
     }
   }
 });
-$('.button-find-hotel').click(function() {
-  var searching_form = $('.searching-form');
-
-  searching_form.toggleClass('form-active');
-  if (searching_form.hasClass('form-active')) {
-    searching_form.removeClass('slide-up').addClass('slide-down')
-    } else {
-      searching_form.removeClass('slide-down').addClass('slide-up');
-  }
-})
