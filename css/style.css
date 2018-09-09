@@ -826,10 +826,14 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.price-controls .min-price,
 .price-controls .max-price {
   width: 101px;
   padding-left: 55px;
+}
+
+.price-controls .min-price {
+  width: 91px;
+  padding-left: 65px;
 }
 
 .price-controls input {
