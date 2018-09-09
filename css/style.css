@@ -92,17 +92,17 @@ input[type="radio"].visually-hidden {
   width: 240px;
 }
 
-.site-navigation li:first-child,
-.site-navigation li:nth-child(2) {
+.site-navigation li:nth-child(4n-3),
+.site-navigation li:nth-child(4n-2) {
   text-align: left;
 }
 
-.site-navigation li:nth-child(2) {
+.site-navigation li:nth-child(4n-2) {
   margin-right: 94px;
 }
 
-.site-navigation li:last-child,
-.site-navigation li:nth-child(3) {
+.site-navigation li:nth-child(4n),
+.site-navigation li:nth-child(4n-1) {
   text-align: right;
 }
 
@@ -131,6 +131,7 @@ input[type="radio"].visually-hidden {
   height: 508px;
 
   background-image: url("../img/intro-background.jpg");
+  background-color: #ddebf4;
   background-size: 1200px 800px;
   background-position: center -82px;
   background-repeat: no-repeat;
@@ -568,6 +569,32 @@ input[type="radio"].visually-hidden {
   transform: rotateX(90deg);
 }
 
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.form-error {
+  animation: shake 0.6s;
+}
+
 .index-map {
   height: 473px;
 }
@@ -585,6 +612,7 @@ input[type="radio"].visually-hidden {
 
 .filters {
   background-image: url("../img/filter-background.jpg");
+  background-color: #6a9ac2;
   background-size: 1200px 800px;
   background-position: center -294px;
   background-repeat: no-repeat;
@@ -665,6 +693,10 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
 }
 
+.filter-input-checkbox:disabled + label::before {
+  opacity: 0.3;
+}
+
 .filter-input {
   font: inherit;
 
@@ -680,7 +712,7 @@ input[type="radio"].visually-hidden {
 
 .price-controls {
   position: relative;
-  height: 36px;
+  height: 34px;
   margin-bottom: 20px;
 
   font-size: 0;
@@ -714,7 +746,7 @@ input[type="radio"].visually-hidden {
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 90px;
+  width: 101px;
   padding-left: 55px;
 }
 
@@ -778,8 +810,8 @@ input[type="radio"].visually-hidden {
 
 .button-show {
   display: block;
-  margin: 0 auto;
-  padding: 6px 35px;
+  margin: 0 50px 0 83px;
+  padding: 7px 35px;
 
   color: #ffffff;
   text-transform: uppercase;
@@ -838,6 +870,8 @@ input[type="radio"].visually-hidden {
   font-size: 12px;
   line-height: 18px;
   list-style: none;
+
+  width: 720px;
 }
 
 .sorting-list li {
@@ -889,7 +923,7 @@ input[type="radio"].visually-hidden {
   display:flex;
   position: relative;
 
-  margin-left: 461px;
+  margin-left: 13px;
 }
 
 .arrow {
@@ -903,12 +937,12 @@ input[type="radio"].visually-hidden {
   border: 10px solid #cacaca;
 }
 
-.arrow:hover::before,
-.arrow:focus::before {
+.arrow-up:hover::before,
+.arrow-up:focus::before {
   border: 10px solid #231f20;
 }
 
-.arrow:active::before {
+.arrow-up:active::before {
   border: 10px solid #81b3d2;
 }
 
@@ -954,6 +988,10 @@ input[type="radio"].visually-hidden {
   margin-top: 4px;
 }
 
+.hotels-item-image {
+  width: 135px;
+}
+
 .info-wrapper {
   flex-grow: 1;
 
@@ -962,7 +1000,6 @@ input[type="radio"].visually-hidden {
 
 .hotels-info h3 {
   margin: 0;
-
   margin-bottom: 7px;
 }
 
@@ -995,6 +1032,7 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels-item-type {
+  display: inline-block;
   width: 116px;
 }
 
@@ -1055,6 +1093,10 @@ input[type="radio"].visually-hidden {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+
+  width: 150px;
+
+  margin-left: 30px;
 }
 
 .rate {

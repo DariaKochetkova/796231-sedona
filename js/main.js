@@ -27,6 +27,9 @@ button.addEventListener("click", function (evt) {
 form.addEventListener("submit", function (evt) {
   if (!checkin.value || !checkout.value || !adults.value || !kids.value) {
     evt.preventDefault();
+    form.classList.remove("form-error");
+    form.offsetWidth = form.offsetWidth;
+    form.classList.add("form-error");
     console.log("Нужно заполнить все поля");
     } else {
       if (isStorageSupport) {
