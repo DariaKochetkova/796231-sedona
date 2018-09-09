@@ -38,7 +38,9 @@ input[type="radio"].visually-hidden {
 
   white-space: nowrap;
 
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -49,9 +51,11 @@ input[type="radio"].visually-hidden {
   width: 1200px;
   margin: auto;
 
-  background-color: #fff;
+  background-color: #ffffff;
 
-  box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
+  -webkit-box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
+
+          box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
 }
 
 .main-header-logo {
@@ -82,8 +86,13 @@ input[type="radio"].visually-hidden {
 
   list-style: none;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
   padding: 13px 73px 15px;
 }
@@ -191,16 +200,23 @@ input[type="radio"].visually-hidden {
 }
 
 .advantages-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .advantages-list li:first-child {
-  order: -2;
+  -webkit-box-ordinal-group: -1;
+      -ms-flex-order: -2;
+          order: -2;
 }
 
 .advantages-item-details {
-  order: -1;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 
 .advantages-list h3,
@@ -215,12 +231,17 @@ input[type="radio"].visually-hidden {
 }
 
 .advantages-item-pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: #ffffff;
 }
 
 .advantages-item-pic:nth-child(2) {
-  flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .index-line-pic {
@@ -246,7 +267,8 @@ input[type="radio"].visually-hidden {
 }
 
 .advantages-item {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 400px;
 
   padding: 26px 72px 44px;
@@ -262,13 +284,17 @@ input[type="radio"].visually-hidden {
 }
 
 .details-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .details-list-item {
   position: relative;
 
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+          box-sizing: border-box;
   width: 400px;
 
   padding: 133px 60px 68px;
@@ -383,19 +409,30 @@ input[type="radio"].visually-hidden {
 }
 
 .searching-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
   position: absolute;
 
   padding: 55px;
 
   background-color: #ffffff;
-  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  -webkit-box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+          box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 
-  transform-origin: top center;
+  -webkit-transform-origin: top center;
+
+      -ms-transform-origin: top center;
+
+          transform-origin: top center;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
   transition: all 1s;
-  transform: rotateX(0);
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
 }
 
 .searching-item,
@@ -412,13 +449,17 @@ input[type="radio"].visually-hidden {
 }
 
 .searching-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 
   margin-bottom: 30px;
 }
 
 .searching-item label {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .searching-item input {
@@ -442,7 +483,8 @@ input[type="radio"].visually-hidden {
 
 .check-in input,
 .check-out input {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
   width: 346px;
   padding: 6px 42px 6px 12px;
@@ -498,7 +540,8 @@ input[type="radio"].visually-hidden {
 
 .adults input,
 .kids input {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
   text-align: center;
 
@@ -566,13 +609,15 @@ input[type="radio"].visually-hidden {
 
 .form-show {
   display: block;
-  transform: rotateX(90deg);
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
 }
 
-@keyframes shake {
+@-webkit-keyframes shake {
   0%,
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 
   10%,
@@ -580,19 +625,47 @@ input[type="radio"].visually-hidden {
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
   }
 }
 
 .form-error {
-  animation: shake 0.6s;
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 
 .index-map {
@@ -619,8 +692,12 @@ input[type="radio"].visually-hidden {
 }
 
 .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 
   color: #ffffff;
 
@@ -660,7 +737,10 @@ input[type="radio"].visually-hidden {
   position: relative;
 
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .filter-input-checkbox + label::before {
@@ -731,7 +811,9 @@ input[type="radio"].visually-hidden {
   height: 22px;
 
   background: #ffffff;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .price-controls label {
@@ -792,7 +874,8 @@ input[type="radio"].visually-hidden {
   background: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+          box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
 }
 
@@ -829,9 +912,14 @@ input[type="radio"].visually-hidden {
 }
 
 .sorting-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 
   border-bottom: 1px solid #e5e5e5;
   padding: 30px 73px 25px;
@@ -864,8 +952,13 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
   font-size: 12px;
   line-height: 18px;
@@ -919,6 +1012,10 @@ input[type="radio"].visually-hidden {
   margin: 0;
 
   list-style: none;
+
+  display:-webkit-box;
+
+  display:-ms-flexbox;
 
   display:flex;
   position: relative;
@@ -979,8 +1076,12 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .hotels-item-image,
@@ -993,7 +1094,9 @@ input[type="radio"].visually-hidden {
 }
 
 .info-wrapper {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 
   margin-left: 30px;
 }
@@ -1021,6 +1124,8 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels-item-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1037,6 +1142,8 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels-item-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1079,6 +1186,10 @@ input[type="radio"].visually-hidden {
   padding: 0;
   margin: 0;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
 
   list-style: none;
@@ -1089,10 +1200,19 @@ input[type="radio"].visually-hidden {
 }
 
 .rate-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 
   width: 150px;
 
@@ -1111,9 +1231,15 @@ input[type="radio"].visually-hidden {
 .main-footer {
   background-color: #ffffff;
   opacity: 0.9;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
   height: 119px;
 }
@@ -1137,18 +1263,29 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0;
 
   list-style: none;
 }
 
 .social-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 
   width: 46px;
   height: 48px;
@@ -1172,9 +1309,15 @@ input[type="radio"].visually-hidden {
 
 .footer-copyright {
   margin: 0;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
   width: 400px;
 
